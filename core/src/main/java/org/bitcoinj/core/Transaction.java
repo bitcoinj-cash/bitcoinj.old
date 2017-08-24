@@ -103,7 +103,7 @@ public class Transaction extends ChildMessage {
     /**
      * If feePerKb is lower than this, Bitcoin Core will treat it as if there were no fee.
      */
-    public static final Coin REFERENCE_DEFAULT_MIN_TX_FEE = Coin.valueOf(5000); // 0.05 mBTC
+    public static final Coin REFERENCE_DEFAULT_MIN_TX_FEE = Coin.valueOf(1000); // 0.01 mBTC
 
     /**
      * If using this feePerKb, transactions will get confirmed within the next couple of blocks.
@@ -116,7 +116,7 @@ public class Transaction extends ChildMessage {
      * This is calculated by assuming a standard output will be 34 bytes, and then using the formula used in
      * {@link TransactionOutput#getMinNonDustValue(Coin)}.
      */
-    public static final Coin MIN_NONDUST_OUTPUT = Coin.valueOf(2730); // satoshis
+    public static final Coin MIN_NONDUST_OUTPUT = Coin.valueOf(546); // satoshis
 
     public static final int CURRENT_VERSION = 2;
     public static final int MAX_STANDARD_VERSION = 2;
