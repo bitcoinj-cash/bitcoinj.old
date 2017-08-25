@@ -130,7 +130,8 @@ public class Transaction extends ChildMessage {
     // list of transactions from a wallet, which is helpful for presenting to users.
     private Date updatedAt;
 
-    // This is an in memory helper only.
+    // This is an in memory helper only. It contains the transaction hash (aka txid), used as a reference by transaction
+    // inputs via outpoints.
     private Sha256Hash hash;
 
     // Data about how confirmed this tx is. Serialized, may be null.
@@ -241,7 +242,8 @@ public class Transaction extends ChildMessage {
     }
 
     /**
-     * Returns the transaction hash as you see them in the block explorer.
+     * Returns the transaction hash (aka txid) as you see them in block explorers. It is used as a reference by
+     * transaction inputs via outpoints.
      */
     @Override
     public Sha256Hash getHash() {
@@ -261,6 +263,9 @@ public class Transaction extends ChildMessage {
         this.hash = hash;
     }
 
+    /**
+     * Returns the transaction hash (aka txid) as you see them in block explorers, as a hex string.
+     */
     public String getHashAsString() {
         return getHash().toString();
     }
