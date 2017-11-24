@@ -76,7 +76,7 @@ public class MainNetParams extends AbstractBitcoinNetParams {
                 "btccash-seeder.bitcoinunlimited.info",
                 "seed.bitprim.org",
                 "seed.deadalnix.me",
-                "seeder.criptolayer.net"
+                "seeder.criptolayer.net",
                 "bitcoin.bloqseeds.net",        // Bloq
         };
         httpSeeds = null; /*new HttpDiscovery.Details[] {

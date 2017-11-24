@@ -41,8 +41,6 @@ public class VersionMessage extends Message {
     public static final int NODE_NETWORK = 1 << 0;
     /** A service bit that denotes whether the peer supports the getutxos message or not. */
     public static final int NODE_GETUTXOS = 1 << 1;
-    /** A service bit used by Bitcoin-ABC to announce Bitcoin Cash nodes. */
-    public static final int NODE_BITCOIN_CASH = 1 << 5;
 
     // NODE_BITCOIN_CASH means the node supports Bitcoin Cash and the
     // associated consensus rule changes.
